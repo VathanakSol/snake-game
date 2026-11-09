@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <h1 class="game-title">🐍 Snake</h1>
+      <div class="scoreboard">
+        <div class="score-box">
+          <span class="score-label">Score</span>
+          <span id="score" class="score-value">0</span>
+        </div>
+        <div class="score-box">
+          <span class="score-label">Best</span>
+          <span id="best" class="score-value">0</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="board-wrap">
+      <canvas id="board" width="400" height="400" aria-label="Snake game board"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title" class="overlay-title">Snake</p>
+        <p id="overlay-text" class="overlay-text">Press Space or tap Start to play</p>
+        <button id="start-btn" class="btn">Start Game</button>
+      </div>
+    </div>
+
+    <p class="hint">Use <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> or <kbd>WASD</kbd> to move · <kbd>Space</kbd> to pause</p>
+
+    <div class="touch-controls" aria-label="Touch controls">
+      <button class="dir-btn" data-dir="up" aria-label="Up">▲</button>
+      <div class="touch-row">
+        <button class="dir-btn" data-dir="left" aria-label="Left">◀</button>
+        <button class="dir-btn" data-dir="down" aria-label="Down">▼</button>
+        <button class="dir-btn" data-dir="right" aria-label="Right">▶</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
